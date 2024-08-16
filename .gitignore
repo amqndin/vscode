@@ -4,3 +4,8 @@
 ./globalStorage/*
 ./workspaceStorage/*
 ./syncLocalSettings.json
+History
+globalStorage
+sync
+workspaceStorage
+syncLocalSettings.json
