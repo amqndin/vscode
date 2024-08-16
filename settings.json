@@ -1,0 +1,181 @@
+{
+  // general
+  "workbench.settings.editor": "json",
+  "files.restoreUndoStack": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "mc-dp-icons",
+  "workbench.list.smoothScrolling": true,
+  "editor.fontSize": 16.5,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  // terminal
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.fontSize": 16,
+  "debug.console.fontSize": 16,
+  // extensions
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
+  "mc-dp-icons.enablePackMcmetaCheck": false,
+  // UI customization
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "scm.inputFontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "chat.editor.fontFamily": "JetBrainsMono Nerd Font",
+  "debug.console.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
+  "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
+  "markdown.preview.fontFamily": "JetBrainsMono Nerd Font",
+
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+  // apc
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 28
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 12,
+      "y": 10
+    }
+  },
+  "apc.font.family": "JetBrainsMono Nerd Font",
+  "apc.monospace.font.family": "JetBrainsMono Nerd Font",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 14
+  },
+  "apc.stylesheet": {
+    ".sidebar > .composite": "height: 12px !important",
+    ".title-label": "display: none !important",
+    ".title-actions": "display: none !important",
+    ".tabs-and-actions-container > .editor-actions": "display: none !important",
+    ".titlebar-center": "display: none !important",
+    ".titlebar-right": "display: none !important",
+    ".inline-tabs-placeholder": "display: none !important",
+  },
+
+
+  // VIM
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+
+  "vim.leader": "<Space>",
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // buffers
+    { "before": ["<S-h>"], "commands": [":bprev"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+    // navigation
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+    {
+      "before": ["leader", "u", "w"],
+      "commands": ["editor.action.toggleWordWrap"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["leader", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    { "before": ["s"], "commands": ["leap.find"] },
+    // code
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] },
+
+    // ----- custom mappings (under leader)
+    // splits
+    { "before": ["\\"], "commands": [":split"] },
+    { "before": ["|"], "commands": [":vsplit"] },
+
+    { "before": ["<c-h>"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["<c-j>"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["<c-k>"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["<c-l>"], "commands": ["workbench.action.focusRightGroup"] },
+
+    // file tree
+    {
+      "before": ["leader", "e"],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    {
+      "before": ["leader", "o"],
+      "commands": ["workbench.files.action.focusFilesExplorer"]
+    },
+
+    // find
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "f", "w"],
+      "commands": ["workbench.action.quickTextSearch"]
+    },
+    {
+      "before": ["leader", "s", "f"],
+      "commands": ["workbench.action.openRecent"]
+    },
+
+    // harpoon
+    {
+      "before": ["leader", "leader", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["leader", "leader", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["leader", "leader", "m"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+
+    // other
+    { "before": ["<Esc>"], "commands": [":noh"]},
+    { "before": ["leader", "c"], "commands": [":bd"] },
+    { "before": ["leader", "g", "g"], "commands": ["lazygit.openLazygit"] },
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "W"], "commands": [":wa!"] },
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
+  ],
+  "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commcnds": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] },
+    { "before": ["leader", "p"], "after": ["\"_dP"] },
+  ],
+  "vim.handleKeys": {
+    //
+  },
+  "vim.shell": "cmd",
+  "vim.neovimPath": "nvim",
+  "vim.enableNeovim": true,
+  "files.associations": {
+    "*.jmc": "jmc"
+  },
+  "update.mode": "manual",
+}
