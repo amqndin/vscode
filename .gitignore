@@ -1,9 +1,3 @@
-./History/*
-./sync/*
-./snippets/*
-./globalStorage/*
-./workspaceStorage/*
-./syncLocalSettings.json
 History
 globalStorage
 sync
